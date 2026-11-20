@@ -104,37 +104,25 @@
     border-radius:2px;
     white-space:nowrap;
   }
-
-  /* ---------- Marquee ---------- */
-  .marquee{
-    background:var(--turmeric);
-    color:var(--ink);
-    overflow:hidden;
-    border-bottom:2px solid var(--ink);
-    border-top:2px solid var(--ink);
-  }
-  .marquee__track{
-    display:flex;
-    width:max-content;
+.marquee__track {
+    display: flex;
+    width: max-content;
     animation: scroll-left 26s linear infinite;
-  }
-  @media (prefers-reduced-motion: reduce){
-    .marquee__track{ animation:none; }
-  }
-  .marquee__track span{
-    font-family:'Space Mono', monospace;
-    font-weight:700;
-    font-size:13px;
-    letter-spacing:0.06em;
-    padding:8px 22px;
-    white-space:nowrap;
-    border-right:2px dashed var(--ink);
-  }
-  @keyframes scroll-left{
-    from{ transform:translateX(0); }
-    to{ transform:translateX(-50%); }
-  }
+}
 
+.marquee__group {
+    display: flex;
+    flex-shrink: 0;
+}
+
+@keyframes scroll-left {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}7
   /* ---------- Hero ---------- */
   .hero{
     position:relative;
@@ -476,12 +464,41 @@
     </div>
   </div>
 
-  <div class="marquee" aria-hidden="true">
+ <div class="marquee" aria-hidden="true">
     <div class="marquee__track">
-      <span>CONFLUENCE</span><span> CONNECT </span><span> COLLABORATE </span><span>CREATE </span><span>CONFLUENCE</span><span> CONNECT </span><span> COLLABORATE </span><span>CREATE </span>
-      <span>CONFLUENCE</span><span> CONNECT </span><span> COLLABORATE </span><span>CREATE </span><span>CONFLUENCE</span><span> CONNECT </span><span> COLLABORATE </span><span>CREATE </span>
+
+        <div class="marquee__group">
+            <span>CONFLUENCE</span>
+            <span>CONNECT</span>
+            <span>COLLABORATE</span>
+            <span>CREATE</span>
+            <span>CONFLUENCE</span>
+            <span>CONNECT</span>
+            <span>COLLABORATE</span>
+            <span>CREATE</span>
+            <span>CONFLUENCE</span>
+            <span>CONNECT</span>
+            <span>COLLABORATE</span>
+            <span>CREATE</span>
+        </div>
+
+        <div class="marquee__group">
+            <span>CONFLUENCE</span>
+            <span>CONNECT</span>
+            <span>COLLABORATE</span>
+            <span>CREATE</span>
+            <span>CONFLUENCE</span>
+            <span>CONNECT</span>
+            <span>COLLABORATE</span>
+            <span>CREATE</span>
+            <span>CONFLUENCE</span>
+            <span>CONNECT</span>
+            <span>COLLABORATE</span>
+            <span>CREATE</span>
+        </div>
+
     </div>
-  </div>
+</div>
 
   <header class="hero">
     <div class="hero__eyebrow">WHERE CREATIVITY MEETS CONNECTION</div>
